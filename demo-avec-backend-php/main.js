@@ -12,11 +12,10 @@ const setConnectionStatusCSSColors = function () {
         $('#connection-status').css('background-color', 'orange').css('color', 'white');
 }
 
-$(document).ready(function () {
-
-    //Initiatialisation de la connection
-
-
+/**
+ * Ouvre une connexion WebScoket avec le serveur de Pusher.com
+ */
+const openPusherConnection = function () {
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
 
@@ -34,13 +33,31 @@ $(document).ready(function () {
         $('#connection-status').html(change.current);
         setConnectionStatusCSSColors()
     });
+}
 
-    //Création d'un nouveau channel (un lobby, un canal de diffusion, identifié seulement par une chaine de caractère)
-    const channel = pusher.subscribe('test_channel');
+/**
+ * Ouvre une nouvelle channel, s'abonne à un type d'evenement et définit une callback à la reception de l'evenement
+ * @param {*} channelName 
+ * @param {*} event 
+ * @param {*} callback 
+ */
+const openPusherChannelAndSuscribeToEvents = function(channelName, event, callback){
 
-    //S'abonner sur cette channel aux messages 'my_event'
-    channel.bind('my_event', function (data) {
+    //Création d'une nouvelle channel:
+    const channel = pusher.subscribe(channelName);
+    //S'abonner sur cette channel aux messages 'my_event' et executer la callback quand ce message est reçu.
+    channel.bind(event, callback);
+}
+
+$(document).ready(function () {
+
+    //Initiatialisation de la connection
+    openPusherConnection()
+
+    //Création d'un nouveau channel (un lobby, un canal de diffusion, identifié seulement par une chaine de caractère),
+    //souscription aux évenements sur cet channel et callback appelé coté client quand un event de ce type est émis.
+    openPusherChannelAndSuscribeToEvents('channel_test', 'my_event', function (data) {
         alert(data);
-    });
+    })
 
 });

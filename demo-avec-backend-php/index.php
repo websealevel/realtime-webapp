@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Time Application with Pusher</title>
+    <style>
+        #connection-status {
+            padding: 2px 6px;
+        }
+
+        .form-field {
+            margin: 2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,14 +24,19 @@
     <main>
         <section>
             <form action="handle-form.php" method="POST">
-                <label for="name">
-                    Your name
-                    <input type="text" name="name" placeholder="J Incubator Jones">
-                </label>
-                <label for="message">
-                    Your message
-                    <input type="text" name="message">
-                </label>
+
+                <div class="form-field">
+                    <label for="name">
+                        Your name
+                        <input type="text" name="name" placeholder="J Incubator Jones">
+                    </label>
+                </div>
+                <div class="form-field">
+                    <label for="message">
+                        Your message
+                        <input type="text" name="message">
+                    </label>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </section>

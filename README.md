@@ -62,4 +62,4 @@ php -S localhost:5001 -t demo-avec-backend-php/
 ## Ressources
 
 - [Realtime Web Apps: With HTML5 WebSocket, PHP, and jQuery, de Jason Lengstorf et Phil Leggeter (Apress, 2013) ](https://learning.oreilly.com/library/view/realtime-web-apps/9781430246206/)
-- [Pusher](https://pusher.com/), un SaSS qui offre un serveur WebSocket avec un dashboard et une API REST
+- [Pusher](https://pusher.com/), un SaSS qui offre un serveur WebSocket avec un dashboard et une API REST. La version gratuite du service nous autorise jusqu'à 200k messages publiés par jour et 100 connections simultanées.

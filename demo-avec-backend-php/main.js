@@ -1,4 +1,4 @@
-import { pusherAPIKey } from "./pusher_api_key.js";
+import { pusherAPIKey } from "./pusher-api-key.js";
 
 /**
 * Met à jour les couleurs du block indiquant le status de la connection.

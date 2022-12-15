@@ -21,11 +21,23 @@ Le livre mentionné utilise pour le projet le SaSS [Pusher](https://pusher.com/)
 ## Dossiers
 
 - `demo`: un dossier démo sur la connection WebSocket avec [Pusher](https://pusher.com/) et Jquery
-
+- `demo-avec-backend-php` : un dossier démo sur la connection WebScocket avec Pusher. Soumission de formulaire à un backend PHP qui soumet lui même le résutat à Pusher, ce dernier publie le contenu sur la channel et le dispatch à tous les clients connectés via WebScoket.
 
 ## Lancer le projet
 
+
+
 ### Lancer le projet `demo`
+
+*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur Pusher.com, récupérer les clefs d'API et créer un fichier pusher-api-key.js qui exporte un objet `pusherAPIKey` comme suit
+
+~~~javascript
+export const pusherAPIKey = {
+    'key' : votre clé Pusher,
+    'cluster' : votre cluster
+}
+~~~
+
 
 ~~~bash
 php -S localhost:5001 -t demo
@@ -33,6 +45,19 @@ php -S localhost:5001 -t demo
 
 ### Lancer le projet `demo-avec-backend`
 
+*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur Pusher.com, récupérer les clefs d'API et créer un fichier pusher-api-key.js qui exporte un objet `pusherAPIKey` comme suit
+
+~~~javascript
+export const pusherAPIKey = {
+    'key' : votre clé Pusher,
+    'cluster' : votre cluster
+}
+~~~
+
+
+~~~bash
+php -S localhost:5001 -t demo-avec-backend-php/
+~~~
 
 ## Ressources
 

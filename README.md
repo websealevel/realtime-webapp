@@ -29,7 +29,7 @@ Le livre mentionné utilise pour le projet le SaSS [Pusher](https://pusher.com/)
 
 ### Lancer le projet `demo`
 
-*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur Pusher.com, récupérer les clefs d'API et créer un fichier pusher-api-key.js qui exporte un objet `pusherAPIKey` comme suit
+*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur [Pusher.com](https://pusher.com/), récupérer les clefs d'API et créer un fichier `pusher-api-key.js` qui exporte un objet `pusherAPIKey` comme suit
 
 ~~~javascript
 export const pusherAPIKey = {
@@ -45,7 +45,7 @@ php -S localhost:5001 -t demo
 
 ### Lancer le projet `demo-avec-backend`
 
-*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur Pusher.com, récupérer les clefs d'API et créer un fichier pusher-api-key.js qui exporte un objet `pusherAPIKey` comme suit
+*Pour lancer cette démo vous devez vous créer un compte (gratuit) sur [Pusher.com](https://pusher.com/), récupérer les clefs d'API et créer un fichier `pusher-api-key.js` qui exporte un objet `pusherAPIKey` comme suit
 
 ~~~javascript
 export const pusherAPIKey = {

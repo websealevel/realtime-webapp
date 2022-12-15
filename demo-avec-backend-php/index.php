@@ -38,7 +38,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.2.slim.min.js" integrity="sha256-E3P3OaTZH+HlEM7f1gdAT3lHAn4nWBZXuYe89DFg2d0=" crossorigin="anonymous"></script>
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
-    <script src="./main.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
 
 </body>
 
